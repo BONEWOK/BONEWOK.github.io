@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="简介" class="level1">
 <h1>简介</h1>
-<p>我的<a href="https://bonewok.github.io/">个人网站</a>，这是一个层级为 <mark>三</mark> 的个人网站。</p>
+<p>我的第一个<a href="https://bonewok.github.io/">个人网站</a>，这是一个层级为 <mark>三</mark> 的个人网站。</p>
 <p>收录了一些 <mark>二</mark> 级网站和一些 <mark>一</mark> 级工具网站。</p>
 <section id="quarto自助手册" class="level2">
 <h2 class="anchored" data-anchor-id="quarto自助手册">quarto自助手册</h2>
@@ -311,7 +311,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/BONEWOK\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
