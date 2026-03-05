@@ -1,0 +1,52 @@
+---
+title: "book's"
+---
+
+# 简介
+我的[个人网站](https://bonewok.github.io/)，这是一个层级为 [三]{.mark} 的个人网站。
+
+收录了一些 [二]{.mark} 级网站和一些 [一]{.mark} 级工具网站。
+
+## quarto自助手册
+
+[markdown基础语法](https://quarto.org/docs/authoring/markdown-basics.html)
+
+[quarto网站创建手册](https://quarto.org/docs/websites/)
+
+## 生物信息学二级网站
+
+|网站名称|平台|简介|
+| :--- | :--- | :--- |
+|[Awesome-Bioinformatics](https://github.com/danielecook/Awesome-Bioinformatics)|github|一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。
+
+
+
+# 工具
+收录一些自己在用的工具
+
+
+| 领域 | 推荐项目 | 简介 | 主要特点 |
+| :--- | :--- | :--- | :--- |
+| **🧬 qPCR数据处理** | **[Click-qPCR](https://kubo-azu.shinyapps.io/Click-qPCR/)<br>[Click-qPCR-github](https://github.com/kubo-azu/Click-qPCR)**  | 一个用户友好的、基于Web的Shiny应用程序，用于简化和交互式地分析qPCR数据。 | - **零编程**：通过网页上传CSV文件即可操作。<br>- **核心算法**：支持 **ΔCt** 和 **ΔΔCt** 相对定量计算 。<br>- **统计分析**：内置 **Welch‘s t-test**，结果以交互式柱状图呈现，可直接下载用于发表 。 |
+| | **[rtpcr](https://cran.r-project.org/web/packages/rtpcr/index.html)**  | 一个功能全面的R包，用于qPCR数据分析，可直接在R环境中使用。 | - **方法全面**：支持 **Livak (ΔΔCt)** 和 **Pfaffl** 等多种计算方法 。<br>- **统计强大**：提供 **t-test、Wilcoxon检验、ANOVA模型** 等多种统计检验 。<br>- **结果可视化**：可直接生成出版级别的图表。 |
+| **🧪 显著性/统计学分析** | 这部分功能通常内嵌在专门的数据分析工具中。例如：<br>- **Click-qPCR**  和 **rtpcr**  本身已包含qPCR数据的统计检验。<br>- 对于其他类型的数据（如计数数据），**R语言**的 **`stats`** 包、**`DESeq2`** (适用于RNA-seq计数数据) 等是更通用的选择。 | | |
+| **🧬 基因组组装与注释** | **[MoGAAAP](https://github.com/dirkjanvw/MoGAAAP)**  | 一个模块化的Snakemake工作流，用于[自动化]{.mark}基因组组装和注释，并包含质量评估。 | - **流程自动化**：输入HiFi等测序数据，自动完成从组装、注释到生成质控报告的完整流程 。<br>- **物种无关**：设计上适用于任何真核生物 。<br>- **模块化设计**：可单独运行组装、注释或质量评估模块 。<br>- **评估全面**：集成了 **BUSCO**、**Merqury**、**OMArk** 等多种主流质控工具 。 |
+| | **[MitoHiFi](https://github.com/marcelauliano/MitoHiFi)**  | 一个专注于从PacBio HiFi测序数据中组装和注释[线粒体基因组]{.mark}的Python工作流。 | - **高度专注**：专门解决线粒体基因组的组装难题。<br>- **核心功能**：能有效区分核线粒体DNA序列（NUMTs），并处理线粒体DNA的异质性 。<br>- **即用型**：提供完整的组装和注释方案。 |
+
+### 💡 如何利用这些资源？
+
+1.  **按需选择，组合使用**：你可以根据当前所处的阶段，选择合适的工具。例如，用 **Click-qPCR** 快速处理实验数据，用 **rtpcr** 进行更复杂的统计学建模，当积累了一定数量的基因组需要处理时，再部署 **MoGAAAP** 这样的流程化管理工具。
+
+2.  **探索更多可能**：GitHub是巨大的资源库。你可以尝试搜索 **`awesome-bioinformatics`** 或 **`awesome-biology`** 等主题（"awesome"列表是GitHub上流行的精选资源清单），通常能找到社区维护的、分类清晰的最佳工具列表，帮助你发现更多符合需求的优秀项目。
+
+3.  **关注社区讨论**：你也可以在 **Biostars**（生物信息学问答网站）或 **Reddit** 的 **r/bioinformatics** 板块中，用更具体的关键词（例如“寻找从qPCR到基因组分析的整合工具”）提问，那里的社区成员可能会提供一些尚未被广泛知晓的小众整合方案或建议。
+
+希望这些具体的项目和思路能为你提供切实的帮助。如果你在尝试某个工具时遇到具体问题，或者在某个环节需要更深入的指导，随时可以再来问我。
+
+
+
+
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
