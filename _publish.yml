@@ -1,0 +1,3 @@
+- source: .
+  dest: gh-pages
+  branch: gh-pages
