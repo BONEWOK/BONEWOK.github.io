@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "book’s",
     "section": "",
-    "text": "我的第一个个人网站，这是一个层级为 三 的个人网站。嘿嘿\n收录了一些 二 级网站和一些 一 级工具网站。\n\n\nmarkdown基础语法\nquarto网站创建手册\n\n\n\n\n\n\n网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
+    "text": "我的第一个个人网站，这是一个层级为 三 的个人网站。嘿嘿,不戳。\n收录了一些 二 级网站和一些 一 级工具网站。\n\n\nmarkdown基础语法\nquarto网站创建手册\n\n\n\n\n\n\n网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
   },
   {
     "objectID": "index.html#quarto自助手册",
