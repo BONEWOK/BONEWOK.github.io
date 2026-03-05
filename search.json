@@ -1,7 +1,14 @@
 [
   {
-    "objectID": "个人网站更新.html",
-    "href": "个人网站更新.html",
+    "objectID": "网站更新.html",
+    "href": "网站更新.html",
+    "title": "修改文件后",
+    "section": "",
+    "text": "修改文件后\nadd\ngit add .\ncommit\ngit commit -m \"更新论文\"\npush\ngit push"
+  },
+  {
+    "objectID": "踩过的坑/个人网站更新.html",
+    "href": "踩过的坑/个人网站更新.html",
     "title": "book's",
     "section": "",
     "text": "更新个人信息（比如新发了一篇论文）\n\n假设你刚发表了一篇论文，想在网站上更新。流程和你创建网站时完全一样：\n\n进入你的项目文件夹my-website，以下是示例\ncd C:\\Users\\BOOK\\Desktop\\AAA_linux\\site-directed\\my-website\n编辑对应的文件\n# 比如在 index.qmd 里更新论文列表，或者在 publications.qmd 里添加新条目\n预览确认（强烈推荐！）\nquarto preview\n重新构建网站\nquarto render\n进入 _site 文件夹并推送到 GitHub\n\n1 进入 _site 文件夹\n\n\ncd _site\n\n2 初始化 git，并强制推送到你的仓库\n\ngit init\n\n3 add\n\ngit add .\n\n4 commit\n\ngit commit -m \"deploy website\"\n\n5 remote\n\ngit remote add origin https://github.com/BONEWOK/BONEWOK.github.io.git\n\n6 branch\n\ngit branch -M main\n\n7 push\n\ngit push -f origin main\n小技巧：如果你只是改文字内容，可以跳过 quarto preview 直接 quarto render，但预览能帮你发现格式问题，避免推到网上才发现不对。"
@@ -11,7 +18,7 @@
     "href": "index.html",
     "title": "book’s",
     "section": "",
-    "text": "我的第一个个人网站，这是一个层级为 三 的个人网站。嘿嘿\n收录了一些 二 级网站和一些 一 级工具网站。\n\n\nmarkdown基础语法\nquarto网站创建手册\n\n\n\n\n\n\n网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
+    "text": "我的第一个个人网站，这是一个层级为 三 的个人网站。嘿嘿,不戳。\n收录了一些 二 级网站和一些 一 级工具网站。\n\n\nmarkdown基础语法\nquarto网站创建手册\n\n\n\n\n\n\n网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
   },
   {
     "objectID": "index.html#quarto自助手册",
@@ -28,46 +35,109 @@
     "text": "网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
   },
   {
-    "objectID": "网站维护指南.html",
-    "href": "网站维护指南.html",
+    "objectID": "踩过的坑/网站维护指南.html",
+    "href": "踩过的坑/网站维护指南.html",
     "title": "3.github操作指南",
     "section": "",
     "text": "太好了！看到你成功的那一刻一定很有成就感吧。现在网站已经上线，接下来的维护就像打理自己的小花园一样，定期更新、偶尔修剪，它会随着你的学术成长一起丰富起来。\n下面我为你整理一个日常维护指南，涵盖了你最可能遇到的几种情况："
   },
   {
-    "objectID": "网站维护指南.html#日常更新就像写论文一样简单",
-    "href": "网站维护指南.html#日常更新就像写论文一样简单",
+    "objectID": "踩过的坑/网站维护指南.html#日常更新就像写论文一样简单",
+    "href": "踩过的坑/网站维护指南.html#日常更新就像写论文一样简单",
     "title": "3.github操作指南",
     "section": "🌱 日常更新：就像写论文一样简单",
     "text": "🌱 日常更新：就像写论文一样简单\n\n1. 更新个人信息（比如新发了一篇论文）\n假设你刚发表了一篇论文，想在网站上更新。流程和你创建网站时完全一样：\n\n进入你的项目文件夹my-website，以下是示例\ncd C:\\Users\\BOOK\\Desktop\\AAA_linux\\site-directed\\my-website\n编辑对应的文件\n# 比如在 index.qmd 里更新论文列表，或者在 publications.qmd 里添加新条目\n预览确认（强烈推荐！）\nquarto preview\n重新构建网站\nquarto render\n进入 _site 文件夹并推送到 GitHub\n\n1 进入 _site 文件夹\n\ncd _site\n\n2 初始化 git，并强制推送到你的仓库\n\ngit init\n\n3 add\n\ngit add .\n\n4 commit\n\ngit commit -m \"deploy website\"\n\n1 remote\n\ngit remote add origin https://github.com/BONEWOK/BONEWOK.github.io.git\n\n6 branch\n\ngit branch -M main\n\n7 push\n\ngit push -f origin main\n\n小技巧：如果你只是改文字内容，可以跳过 quarto preview 直接 quarto render，但预览能帮你发现格式问题，避免推到网上才发现不对。\n\n\n2. 添加新页面（比如增加“教学”或“博客”板块）\n\n在项目文件夹里新建一个 .qmd 文件，比如 teaching.qmd。\n文件开头写上 YAML 头信息：\n---\ntitle: \"教学\"\n---\n用 Markdown 写内容。\n在 _quarto.yml 的 navbar 部分添加这个页面的链接：\nnavbar:\n  left:\n    - text: \"主页\"\n      href: index.qmd\n    - text: \"研究\"\n      href: research.qmd\n    - text: \"教学\"    # 新加的\n      href: teaching.qmd\n然后重复上面的构建和推送步骤。"
   },
   {
-    "objectID": "网站维护指南.html#版本控制你的后悔药",
-    "href": "网站维护指南.html#版本控制你的后悔药",
+    "objectID": "踩过的坑/网站维护指南.html#版本控制你的后悔药",
+    "href": "踩过的坑/网站维护指南.html#版本控制你的后悔药",
     "title": "3.github操作指南",
     "section": "🔄 版本控制：你的“后悔药”",
     "text": "🔄 版本控制：你的“后悔药”\n你现在已经在用 Git 了，这是一个强大的时间机器。几个常用命令让你随时可以反悔：\n\n\n\n\n\n\n\n\n场景\n命令\n说明\n\n\n\n\n想看看改了什么\ngit status\n显示哪些文件被修改了\n\n\n想撤销某个文件的修改\ngit checkout -- 文件名\n回到上一次提交的状态\n\n\n想回到过去某个版本\ngit log 查看历史，然后 git reset --hard 版本号\n谨慎使用，会丢失之后的所有修改\n\n\n不小心删了文件\ngit checkout -- 文件名\n只要提交过就能恢复\n\n\n\n建议：每次更新网站前，先 git pull 拉取最新状态（如果你在多台电脑上维护），避免冲突。"
   },
   {
-    "objectID": "网站维护指南.html#遇到问题怎么办",
-    "href": "网站维护指南.html#遇到问题怎么办",
+    "objectID": "踩过的坑/网站维护指南.html#遇到问题怎么办",
+    "href": "踩过的坑/网站维护指南.html#遇到问题怎么办",
     "title": "3.github操作指南",
     "section": "🚨 遇到问题怎么办？",
     "text": "🚨 遇到问题怎么办？\n\n情况1：网站打不开了，显示 404\n\n先去 GitHub 仓库看看，_site 里的文件是否成功推送？index.html 在不在？\n检查 Settings → Pages，看看部署状态是不是绿色勾勾。\n如果是红色叉叉，点进去看 Actions 的日志，错误信息一般很明确。\n\n\n\n情况2：样式乱了，或者公式不显示\n\n大概率是路径问题。检查 _quarto.yml 里有没有设置 output-dir，以及 styles.css 的引用路径是否正确。\n在浏览器按 F12 打开开发者工具，看 Console（控制台）里有没有红色报错，通常会告诉你哪个文件没找到。\n\n\n\n情况3：想换主题\nQuarto 支持很多漂亮的主题，在 _quarto.yml 里修改：\nformat:\n  html:\n    theme: cosmo  # 可选：cerulean, journal, flatly, darkly 等\n官方主题列表 可以预览效果。"
   },
   {
-    "objectID": "网站维护指南.html#让网站更学术的进阶技巧",
-    "href": "网站维护指南.html#让网站更学术的进阶技巧",
+    "objectID": "踩过的坑/网站维护指南.html#让网站更学术的进阶技巧",
+    "href": "踩过的坑/网站维护指南.html#让网站更学术的进阶技巧",
     "title": "3.github操作指南",
     "section": "📈 让网站更“学术”的进阶技巧",
     "text": "📈 让网站更“学术”的进阶技巧\n等你熟悉基础维护后，可以考虑这些功能，对博士生特别有用：\n\n自动生成论文列表\n如果你有 BibTeX 文件（比如从 Google Scholar 导出的），可以用 Quarto 的 citations 功能自动格式化参考文献列表。\n嵌入动态图表\n如果你有生物信息学数据，可以直接在 .qmd 里写 R 或 Python 代码，Quarto 会在渲染时运行并生成图表。这样你更新数据时，图表会自动更新。\n添加访客统计\n在 _quarto.yml 的 include-in-header 里添加一段 Google Analytics 代码，就能看到谁在访问你的主页。\n绑定自定义域名\n等你以后有了自己的名字（比如 zhangsan.com），可以在 GitHub Pages 设置里绑定，让你的网站看起来更专业。"
   },
   {
-    "objectID": "网站维护指南.html#最后一点建议",
-    "href": "网站维护指南.html#最后一点建议",
+    "objectID": "踩过的坑/网站维护指南.html#最后一点建议",
+    "href": "踩过的坑/网站维护指南.html#最后一点建议",
     "title": "3.github操作指南",
     "section": "🌟 最后一点建议",
     "text": "🌟 最后一点建议\n把你网站的维护流程写成一个简单的 备忘录（比如这篇对话的精华），放在项目文件夹里。这样哪怕半年后再更新，也不会忘记步骤。\n你现在拥有的不仅是一个网页，更是你在数字世界的学术身份。随着你发表更多论文、参加更多会议，它会自然生长成你的学术名片。\n如果在维护中遇到任何问题，随时回来问我。祝你科研顺利，网页常新！"
+  },
+  {
+    "objectID": "踩过的坑/Quarto网站部署指南（小学生版）.html",
+    "href": "踩过的坑/Quarto网站部署指南（小学生版）.html",
+    "title": "小学生也能学会的Quarto网站部署指南 📚✨",
+    "section": "",
+    "text": "想拥有一个自己的网站吗？只要跟着下面的步骤，就像搭积木一样简单！\n\n\n\n\n一台电脑（Windows/Mac都可以）\n安装了 Quarto（一个帮你做网站的工具）\n一个 GitHub 账号（网站的家）\n\n\n💡 如果还没有安装Quarto，可以请爸爸妈妈帮你从 quarto.org 下载安装。GitHub账号也需要大人帮忙注册哦。\n\n\n\n\n\n\n在桌面新建一个文件夹，取名叫 my-website。\n打开这个文件夹，在里面放一个叫 index.qmd 的文件（这是你网站的第一页）。\n用记事本打开 index.qmd，写上：\n---\ntitle: \"我的第一个网站\"\n---\n\n你好，世界！这是我的网站。\n保存文件。\n\n\n\n\n\n\n打开电脑的“命令提示符”或“终端”（可以在开始菜单搜索“cmd”或“终端”打开）。\n输入下面的命令，按回车，进入你的网站文件夹：\ncd 桌面\\my-website\n输入下面的命令，按回车，让Quarto帮你把网站“变”出来：\nquarto preview\n这时候你的浏览器会自动打开，可以看到你的网站长什么样啦！😊\n按 Ctrl+C 可以关闭预览。\n\n\n\n\n\n\n打开 github.com，登录你的账号。\n点绿色的 New 按钮，新建一个仓库（repository）。\n\nRepository name 填：你的用户名.github.io（比如你的用户名是 xiaoming，就填 xiaoming.github.io）\n保持公开（Public），不要勾选任何初始化选项。\n点 Create repository。\n\n回到电脑的命令行，输入下面这些命令，一行一行敲，每敲完一行按一次回车：\ngit init\ngit add .\ngit commit -m \"第一次提交\"\ngit branch -M main\ngit remote add origin https://github.com/你的用户名/你的用户名.github.io.git\n⚠️ 把命令里的 你的用户名 换成你自己的GitHub用户名。\n现在，用Quarto把网站“推”到GitHub上：\nquarto publish gh-pages\n它会问你要发布到哪个仓库，输入 origin 然后回车。\n等它跑完，你的网站就上线啦！🎉\n去GitHub上检查：打开你的仓库，点 Settings → Pages，确保 Branch 选的是 gh-pages。\n过几分钟，访问 https://你的用户名.github.io 就能看到你的网站了。\n\n\n\n\n\n每次更新网站都要手动运行 quarto publish 有点麻烦，我们来请一个“小机器人”帮忙，以后只要把修改过的文件推上去，网站就会自动更新。\n\n在 my-website 文件夹里，新建一个文件夹叫 .github，再在里面新建一个文件夹叫 workflows。\n在 workflows 文件夹里新建一个文件叫 publish.yml，用记事本打开，把下面的内容复制进去：\non:\n  push:\n    branches: main\n\nname: Quarto Publish\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: write\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v4\n\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n\n      - name: Render and Publish\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n保存文件。\n在命令行里输入：\ngit add .\ngit commit -m \"添加自动更新小助手\"\ngit push\n第一次推送时，可能会提示你设置上游分支，输入：\ngit push --set-upstream origin main\n\n好了！现在小机器人已经在GitHub上等着了。以后你只要修改 index.qmd，然后执行这三行命令：\ngit add .\ngit commit -m \"更新了网站内容\"\ngit push\n等一两分钟，你的网站就会自动更新啦！🌟\n\n\n\n\n\n打开 my-website 文件夹，修改或新建 .qmd 文件（比如 diary.qmd）。\n在文件里写你的内容。\n打开命令行，进入 my-website 文件夹。\n依次输入：\ngit add .\ngit commit -m \"写了今天的日记\"\ngit push\n等一会儿，去你的网站看看，新内容已经出现啦！\n\n\n\n\n\n\n命令敲错了怎么办？\n没关系，重新敲一遍正确的就行。或者按方向键↑可以调出上一条命令修改。\n提示“不是git仓库”\n说明你忘记 git init 了，在 my-website 文件夹里执行一下就好。\npush时要求输入用户名密码\nGitHub现在不能用密码了，需要用token。让大人帮忙生成一个token（Settings → Developer settings → Personal access tokens），复制后粘贴到密码框里（粘贴时屏幕不会显示，直接回车就行）。\n网站更新后没变化？\n等几分钟，或者去GitHub仓库的 Actions 标签页看看小机器人有没有成功运行。如果有红色叉叉，点进去看日志，把错误信息复制给大人帮忙看看。\n\n\n\n\n\n\n用Quarto制作简单的网站\n把网站存到GitHub上\n请小机器人（GitHub Actions）自动更新网站\n以后只要写内容、敲三行命令，网站就自动更新\n\n现在，你可以拥有一个属于自己的网站啦！快去试试吧！🎈\n\n如果还有不懂的地方，可以问问爸爸妈妈，或者在网上搜索“Quarto GitHub Pages”找更多教程。"
+  },
+  {
+    "objectID": "踩过的坑/Quarto网站部署指南（小学生版）.html#第一步我们需要什么",
+    "href": "踩过的坑/Quarto网站部署指南（小学生版）.html#第一步我们需要什么",
+    "title": "小学生也能学会的Quarto网站部署指南 📚✨",
+    "section": "",
+    "text": "一台电脑（Windows/Mac都可以）\n安装了 Quarto（一个帮你做网站的工具）\n一个 GitHub 账号（网站的家）\n\n\n💡 如果还没有安装Quarto，可以请爸爸妈妈帮你从 quarto.org 下载安装。GitHub账号也需要大人帮忙注册哦。"
+  },
+  {
+    "objectID": "踩过的坑/Quarto网站部署指南（小学生版）.html#第二步在电脑上建一个网站文件夹",
+    "href": "踩过的坑/Quarto网站部署指南（小学生版）.html#第二步在电脑上建一个网站文件夹",
+    "title": "小学生也能学会的Quarto网站部署指南 📚✨",
+    "section": "",
+    "text": "在桌面新建一个文件夹，取名叫 my-website。\n打开这个文件夹，在里面放一个叫 index.qmd 的文件（这是你网站的第一页）。\n用记事本打开 index.qmd，写上：\n---\ntitle: \"我的第一个网站\"\n---\n\n你好，世界！这是我的网站。\n保存文件。"
+  },
+  {
+    "objectID": "踩过的坑/Quarto网站部署指南（小学生版）.html#第三步让网站变成漂亮的html页面",
+    "href": "踩过的坑/Quarto网站部署指南（小学生版）.html#第三步让网站变成漂亮的html页面",
+    "title": "小学生也能学会的Quarto网站部署指南 📚✨",
+    "section": "",
+    "text": "打开电脑的“命令提示符”或“终端”（可以在开始菜单搜索“cmd”或“终端”打开）。\n输入下面的命令，按回车，进入你的网站文件夹：\ncd 桌面\\my-website\n输入下面的命令，按回车，让Quarto帮你把网站“变”出来：\nquarto preview\n这时候你的浏览器会自动打开，可以看到你的网站长什么样啦！😊\n按 Ctrl+C 可以关闭预览。"
+  },
+  {
+    "objectID": "踩过的坑/Quarto网站部署指南（小学生版）.html#第四步把网站放到github上第一次搬家",
+    "href": "踩过的坑/Quarto网站部署指南（小学生版）.html#第四步把网站放到github上第一次搬家",
+    "title": "小学生也能学会的Quarto网站部署指南 📚✨",
+    "section": "",
+    "text": "打开 github.com，登录你的账号。\n点绿色的 New 按钮，新建一个仓库（repository）。\n\nRepository name 填：你的用户名.github.io（比如你的用户名是 xiaoming，就填 xiaoming.github.io）\n保持公开（Public），不要勾选任何初始化选项。\n点 Create repository。\n\n回到电脑的命令行，输入下面这些命令，一行一行敲，每敲完一行按一次回车：\ngit init\ngit add .\ngit commit -m \"第一次提交\"\ngit branch -M main\ngit remote add origin https://github.com/你的用户名/你的用户名.github.io.git\n⚠️ 把命令里的 你的用户名 换成你自己的GitHub用户名。\n现在，用Quarto把网站“推”到GitHub上：\nquarto publish gh-pages\n它会问你要发布到哪个仓库，输入 origin 然后回车。\n等它跑完，你的网站就上线啦！🎉\n去GitHub上检查：打开你的仓库，点 Settings → Pages，确保 Branch 选的是 gh-pages。\n过几分钟，访问 https://你的用户名.github.io 就能看到你的网站了。"
+  },
+  {
+    "objectID": "踩过的坑/Quarto网站部署指南（小学生版）.html#第五步让网站自己更新配置自动小助手",
+    "href": "踩过的坑/Quarto网站部署指南（小学生版）.html#第五步让网站自己更新配置自动小助手",
+    "title": "小学生也能学会的Quarto网站部署指南 📚✨",
+    "section": "",
+    "text": "每次更新网站都要手动运行 quarto publish 有点麻烦，我们来请一个“小机器人”帮忙，以后只要把修改过的文件推上去，网站就会自动更新。\n\n在 my-website 文件夹里，新建一个文件夹叫 .github，再在里面新建一个文件夹叫 workflows。\n在 workflows 文件夹里新建一个文件叫 publish.yml，用记事本打开，把下面的内容复制进去：\non:\n  push:\n    branches: main\n\nname: Quarto Publish\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: write\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v4\n\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n\n      - name: Render and Publish\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n保存文件。\n在命令行里输入：\ngit add .\ngit commit -m \"添加自动更新小助手\"\ngit push\n第一次推送时，可能会提示你设置上游分支，输入：\ngit push --set-upstream origin main\n\n好了！现在小机器人已经在GitHub上等着了。以后你只要修改 index.qmd，然后执行这三行命令：\ngit add .\ngit commit -m \"更新了网站内容\"\ngit push\n等一两分钟，你的网站就会自动更新啦！🌟"
+  },
+  {
+    "objectID": "踩过的坑/Quarto网站部署指南（小学生版）.html#日常更新就像写日记一样简单",
+    "href": "踩过的坑/Quarto网站部署指南（小学生版）.html#日常更新就像写日记一样简单",
+    "title": "小学生也能学会的Quarto网站部署指南 📚✨",
+    "section": "",
+    "text": "打开 my-website 文件夹，修改或新建 .qmd 文件（比如 diary.qmd）。\n在文件里写你的内容。\n打开命令行，进入 my-website 文件夹。\n依次输入：\ngit add .\ngit commit -m \"写了今天的日记\"\ngit push\n等一会儿，去你的网站看看，新内容已经出现啦！"
+  },
+  {
+    "objectID": "踩过的坑/Quarto网站部署指南（小学生版）.html#可能遇到的问题别怕有办法",
+    "href": "踩过的坑/Quarto网站部署指南（小学生版）.html#可能遇到的问题别怕有办法",
+    "title": "小学生也能学会的Quarto网站部署指南 📚✨",
+    "section": "",
+    "text": "命令敲错了怎么办？\n没关系，重新敲一遍正确的就行。或者按方向键↑可以调出上一条命令修改。\n提示“不是git仓库”\n说明你忘记 git init 了，在 my-website 文件夹里执行一下就好。\npush时要求输入用户名密码\nGitHub现在不能用密码了，需要用token。让大人帮忙生成一个token（Settings → Developer settings → Personal access tokens），复制后粘贴到密码框里（粘贴时屏幕不会显示，直接回车就行）。\n网站更新后没变化？\n等几分钟，或者去GitHub仓库的 Actions 标签页看看小机器人有没有成功运行。如果有红色叉叉，点进去看日志，把错误信息复制给大人帮忙看看。"
+  },
+  {
+    "objectID": "踩过的坑/Quarto网站部署指南（小学生版）.html#总结一下我们学会了什么",
+    "href": "踩过的坑/Quarto网站部署指南（小学生版）.html#总结一下我们学会了什么",
+    "title": "小学生也能学会的Quarto网站部署指南 📚✨",
+    "section": "",
+    "text": "用Quarto制作简单的网站\n把网站存到GitHub上\n请小机器人（GitHub Actions）自动更新网站\n以后只要写内容、敲三行命令，网站就自动更新\n\n现在，你可以拥有一个属于自己的网站啦！快去试试吧！🎈\n\n如果还有不懂的地方，可以问问爸爸妈妈，或者在网上搜索“Quarto GitHub Pages”找更多教程。"
   },
   {
     "objectID": "about.html",

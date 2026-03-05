@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>book’s</title>
+<title>quarto网站部署指南（小学生版） – book's</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-afa37c5c79185640b9c231024f4fe5ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-afa37c5c79185640b9c231024f4fe5ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">book’s</span>
     </a>
   </div>
@@ -91,11 +126,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -114,124 +149,182 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#简介" id="toc-简介" class="nav-link active" data-scroll-target="#简介">简介</a>
+  <li><a href="#小学生也能学会的quarto网站部署指南" id="toc-小学生也能学会的quarto网站部署指南" class="nav-link active" data-scroll-target="#小学生也能学会的quarto网站部署指南">小学生也能学会的Quarto网站部署指南 📚✨</a>
   <ul class="collapse">
-  <li><a href="#quarto自助手册" id="toc-quarto自助手册" class="nav-link" data-scroll-target="#quarto自助手册">quarto自助手册</a></li>
-  <li><a href="#生物信息学二级网站" id="toc-生物信息学二级网站" class="nav-link" data-scroll-target="#生物信息学二级网站">生物信息学二级网站</a></li>
-  </ul></li>
-  <li><a href="#工具" id="toc-工具" class="nav-link" data-scroll-target="#工具">工具</a>
-  <ul class="collapse">
-  <li><a href="#如何利用这些资源" id="toc-如何利用这些资源" class="nav-link" data-scroll-target="#如何利用这些资源">💡 如何利用这些资源？</a></li>
+  <li><a href="#第一步我们需要什么" id="toc-第一步我们需要什么" class="nav-link" data-scroll-target="#第一步我们需要什么">第一步：我们需要什么？🧰</a></li>
+  <li><a href="#第二步在电脑上建一个网站文件夹" id="toc-第二步在电脑上建一个网站文件夹" class="nav-link" data-scroll-target="#第二步在电脑上建一个网站文件夹">第二步：在电脑上建一个网站文件夹 📁</a></li>
+  <li><a href="#第三步让网站变成漂亮的html页面" id="toc-第三步让网站变成漂亮的html页面" class="nav-link" data-scroll-target="#第三步让网站变成漂亮的html页面">第三步：让网站变成漂亮的HTML页面 🎨</a></li>
+  <li><a href="#第四步把网站放到github上第一次搬家" id="toc-第四步把网站放到github上第一次搬家" class="nav-link" data-scroll-target="#第四步把网站放到github上第一次搬家">第四步：把网站放到GitHub上（第一次搬家）🚚</a></li>
+  <li><a href="#第五步让网站自己更新配置自动小助手" id="toc-第五步让网站自己更新配置自动小助手" class="nav-link" data-scroll-target="#第五步让网站自己更新配置自动小助手">第五步：让网站自己更新（配置自动小助手🤖）</a></li>
+  <li><a href="#日常更新就像写日记一样简单" id="toc-日常更新就像写日记一样简单" class="nav-link" data-scroll-target="#日常更新就像写日记一样简单">日常更新（就像写日记一样简单）📝</a></li>
+  <li><a href="#可能遇到的问题别怕有办法" id="toc-可能遇到的问题别怕有办法" class="nav-link" data-scroll-target="#可能遇到的问题别怕有办法">可能遇到的问题（别怕，有办法）🆘</a></li>
+  <li><a href="#总结一下我们学会了什么" id="toc-总结一下我们学会了什么" class="nav-link" data-scroll-target="#总结一下我们学会了什么">总结一下，我们学会了什么？✅</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">book’s</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="简介" class="level1">
-<h1>简介</h1>
-<p>我的第一个<a href="https://bonewok.github.io/">个人网站</a>，这是一个层级为 <mark>三</mark> 的个人网站。嘿嘿,不戳。</p>
-<p>收录了一些 <mark>二</mark> 级网站和一些 <mark>一</mark> 级工具网站。</p>
-<section id="quarto自助手册" class="level2">
-<h2 class="anchored" data-anchor-id="quarto自助手册">quarto自助手册</h2>
-<p><a href="https://quarto.org/docs/authoring/markdown-basics.html">markdown基础语法</a></p>
-<p><a href="https://quarto.org/docs/websites/">quarto网站创建手册</a></p>
+<section id="小学生也能学会的quarto网站部署指南" class="level1">
+<h1>小学生也能学会的Quarto网站部署指南 📚✨</h1>
+<blockquote class="blockquote">
+<p>想拥有一个自己的网站吗？只要跟着下面的步骤，就像搭积木一样简单！</p>
+</blockquote>
+<section id="第一步我们需要什么" class="level2">
+<h2 class="anchored" data-anchor-id="第一步我们需要什么">第一步：我们需要什么？🧰</h2>
+<ul>
+<li>一台电脑（Windows/Mac都可以）</li>
+<li>安装了 <strong>Quarto</strong>（一个帮你做网站的工具）</li>
+<li>一个 <strong>GitHub</strong> 账号（网站的家）</li>
+</ul>
+<blockquote class="blockquote">
+<p>💡 如果还没有安装Quarto，可以请爸爸妈妈帮你从 <a href="https://quarto.org">quarto.org</a> 下载安装。GitHub账号也需要大人帮忙注册哦。</p>
+</blockquote>
+<hr>
 </section>
-<section id="生物信息学二级网站" class="level2">
-<h2 class="anchored" data-anchor-id="生物信息学二级网站">生物信息学二级网站</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">网站名称</th>
-<th style="text-align: left;">平台</th>
-<th style="text-align: left;">简介</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://github.com/danielecook/Awesome-Bioinformatics">Awesome-Bioinformatics</a></td>
-<td style="text-align: left;">github</td>
-<td style="text-align: left;">一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="工具" class="level1">
-<h1>工具</h1>
-<p>收录一些自己在用的工具</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">领域</th>
-<th style="text-align: left;">推荐项目</th>
-<th style="text-align: left;">简介</th>
-<th style="text-align: left;">主要特点</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>🧬 qPCR数据处理</strong></td>
-<td style="text-align: left;"><strong><a href="https://kubo-azu.shinyapps.io/Click-qPCR/">Click-qPCR</a><br><a href="https://github.com/kubo-azu/Click-qPCR">Click-qPCR-github</a></strong></td>
-<td style="text-align: left;">一个用户友好的、基于Web的Shiny应用程序，用于简化和交互式地分析qPCR数据。</td>
-<td style="text-align: left;">- <strong>零编程</strong>：通过网页上传CSV文件即可操作。<br>- <strong>核心算法</strong>：支持 <strong>ΔCt</strong> 和 <strong>ΔΔCt</strong> 相对定量计算 。<br>- <strong>统计分析</strong>：内置 <strong>Welch‘s t-test</strong>，结果以交互式柱状图呈现，可直接下载用于发表 。</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><strong><a href="https://cran.r-project.org/web/packages/rtpcr/index.html">rtpcr</a></strong></td>
-<td style="text-align: left;">一个功能全面的R包，用于qPCR数据分析，可直接在R环境中使用。</td>
-<td style="text-align: left;">- <strong>方法全面</strong>：支持 <strong>Livak (ΔΔCt)</strong> 和 <strong>Pfaffl</strong> 等多种计算方法 。<br>- <strong>统计强大</strong>：提供 <strong>t-test、Wilcoxon检验、ANOVA模型</strong> 等多种统计检验 。<br>- <strong>结果可视化</strong>：可直接生成出版级别的图表。</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>🧪 显著性/统计学分析</strong></td>
-<td style="text-align: left;">这部分功能通常内嵌在专门的数据分析工具中。例如：<br>- <strong>Click-qPCR</strong> 和 <strong>rtpcr</strong> 本身已包含qPCR数据的统计检验。<br>- 对于其他类型的数据（如计数数据），<strong>R语言</strong>的 <strong><code>stats</code></strong> 包、<strong><code>DESeq2</code></strong> (适用于RNA-seq计数数据) 等是更通用的选择。</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>🧬 基因组组装与注释</strong></td>
-<td style="text-align: left;"><strong><a href="https://github.com/dirkjanvw/MoGAAAP">MoGAAAP</a></strong></td>
-<td style="text-align: left;">一个模块化的Snakemake工作流，用于<mark>自动化</mark>基因组组装和注释，并包含质量评估。</td>
-<td style="text-align: left;">- <strong>流程自动化</strong>：输入HiFi等测序数据，自动完成从组装、注释到生成质控报告的完整流程 。<br>- <strong>物种无关</strong>：设计上适用于任何真核生物 。<br>- <strong>模块化设计</strong>：可单独运行组装、注释或质量评估模块 。<br>- <strong>评估全面</strong>：集成了 <strong>BUSCO</strong>、<strong>Merqury</strong>、<strong>OMArk</strong> 等多种主流质控工具 。</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><strong><a href="https://github.com/marcelauliano/MitoHiFi">MitoHiFi</a></strong></td>
-<td style="text-align: left;">一个专注于从PacBio HiFi测序数据中组装和注释<mark>线粒体基因组</mark>的Python工作流。</td>
-<td style="text-align: left;">- <strong>高度专注</strong>：专门解决线粒体基因组的组装难题。<br>- <strong>核心功能</strong>：能有效区分核线粒体DNA序列（NUMTs），并处理线粒体DNA的异质性 。<br>- <strong>即用型</strong>：提供完整的组装和注释方案。</td>
-</tr>
-</tbody>
-</table>
-<section id="如何利用这些资源" class="level3">
-<h3 class="anchored" data-anchor-id="如何利用这些资源">💡 如何利用这些资源？</h3>
+<section id="第二步在电脑上建一个网站文件夹" class="level2">
+<h2 class="anchored" data-anchor-id="第二步在电脑上建一个网站文件夹">第二步：在电脑上建一个网站文件夹 📁</h2>
 <ol type="1">
-<li><p><strong>按需选择，组合使用</strong>：你可以根据当前所处的阶段，选择合适的工具。例如，用 <strong>Click-qPCR</strong> 快速处理实验数据，用 <strong>rtpcr</strong> 进行更复杂的统计学建模，当积累了一定数量的基因组需要处理时，再部署 <strong>MoGAAAP</strong> 这样的流程化管理工具。</p></li>
-<li><p><strong>探索更多可能</strong>：GitHub是巨大的资源库。你可以尝试搜索 <strong><code>awesome-bioinformatics</code></strong> 或 <strong><code>awesome-biology</code></strong> 等主题（“awesome”列表是GitHub上流行的精选资源清单），通常能找到社区维护的、分类清晰的最佳工具列表，帮助你发现更多符合需求的优秀项目。</p></li>
-<li><p><strong>关注社区讨论</strong>：你也可以在 <strong>Biostars</strong>（生物信息学问答网站）或 <strong>Reddit</strong> 的 <strong>r/bioinformatics</strong> 板块中，用更具体的关键词（例如“寻找从qPCR到基因组分析的整合工具”）提问，那里的社区成员可能会提供一些尚未被广泛知晓的小众整合方案或建议。</p></li>
+<li><p>在桌面新建一个文件夹，取名叫 <code>my-website</code>。</p></li>
+<li><p>打开这个文件夹，在里面放一个叫 <code>index.qmd</code> 的文件（这是你网站的第一页）。</p></li>
+<li><p>用记事本打开 <code>index.qmd</code>，写上：</p>
+<pre><code>---
+title: "我的第一个网站"
+---
+
+你好，世界！这是我的网站。</code></pre></li>
+<li><p>保存文件。</p></li>
 </ol>
-<p>希望这些具体的项目和思路能为你提供切实的帮助。如果你在尝试某个工具时遇到具体问题，或者在某个环节需要更深入的指导，随时可以再来问我。</p>
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<hr>
+</section>
+<section id="第三步让网站变成漂亮的html页面" class="level2">
+<h2 class="anchored" data-anchor-id="第三步让网站变成漂亮的html页面">第三步：让网站变成漂亮的HTML页面 🎨</h2>
+<ol type="1">
+<li><p>打开电脑的“命令提示符”或“终端”（可以在开始菜单搜索“cmd”或“终端”打开）。</p></li>
+<li><p>输入下面的命令，按回车，进入你的网站文件夹：</p>
+<pre><code>cd 桌面\my-website</code></pre></li>
+<li><p>输入下面的命令，按回车，让Quarto帮你把网站“变”出来：</p>
+<pre><code>quarto preview</code></pre>
+<p>这时候你的浏览器会自动打开，可以看到你的网站长什么样啦！😊<br>
+按 <code>Ctrl+C</code> 可以关闭预览。</p></li>
+</ol>
+<hr>
+</section>
+<section id="第四步把网站放到github上第一次搬家" class="level2">
+<h2 class="anchored" data-anchor-id="第四步把网站放到github上第一次搬家">第四步：把网站放到GitHub上（第一次搬家）🚚</h2>
+<ol type="1">
+<li><p>打开 <a href="https://github.com">github.com</a>，登录你的账号。</p></li>
+<li><p>点绿色的 <strong>New</strong> 按钮，新建一个仓库（repository）。</p>
+<ul>
+<li>Repository name 填：<code>你的用户名.github.io</code>（比如你的用户名是 <code>xiaoming</code>，就填 <code>xiaoming.github.io</code>）</li>
+<li>保持公开（Public），不要勾选任何初始化选项。</li>
+<li>点 <strong>Create repository</strong>。</li>
+</ul></li>
+<li><p>回到电脑的命令行，输入下面这些命令，一行一行敲，每敲完一行按一次回车：</p>
+<pre><code>git init
+git add .
+git commit -m "第一次提交"
+git branch -M main
+git remote add origin https://github.com/你的用户名/你的用户名.github.io.git</code></pre>
+<p>⚠️ 把命令里的 <code>你的用户名</code> 换成你自己的GitHub用户名。</p></li>
+<li><p>现在，用Quarto把网站“推”到GitHub上：</p>
+<pre><code>quarto publish gh-pages</code></pre>
+<p>它会问你要发布到哪个仓库，输入 <code>origin</code> 然后回车。<br>
+等它跑完，你的网站就上线啦！🎉</p></li>
+<li><p>去GitHub上检查：打开你的仓库，点 <strong>Settings</strong> → <strong>Pages</strong>，确保 <strong>Branch</strong> 选的是 <code>gh-pages</code>。<br>
+过几分钟，访问 <code>https://你的用户名.github.io</code> 就能看到你的网站了。</p></li>
+</ol>
+<hr>
+</section>
+<section id="第五步让网站自己更新配置自动小助手" class="level2">
+<h2 class="anchored" data-anchor-id="第五步让网站自己更新配置自动小助手">第五步：让网站自己更新（配置自动小助手🤖）</h2>
+<p>每次更新网站都要手动运行 <code>quarto publish</code> 有点麻烦，我们来请一个“小机器人”帮忙，以后只要把修改过的文件推上去，网站就会自动更新。</p>
+<ol type="1">
+<li><p>在 <code>my-website</code> 文件夹里，新建一个文件夹叫 <code>.github</code>，再在里面新建一个文件夹叫 <code>workflows</code>。</p></li>
+<li><p>在 <code>workflows</code> 文件夹里新建一个文件叫 <code>publish.yml</code>，用记事本打开，把下面的内容复制进去：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> main</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Quarto Publish</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build-deploy</span><span class="kw">:</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">permissions</span><span class="kw">:</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> write</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Check out repository</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v4</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Quarto</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> quarto-dev/quarto-actions/setup@v2</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Render and Publish</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> quarto-dev/quarto-actions/publish@v2</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">target</span><span class="kw">:</span><span class="at"> gh-pages</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">env</span><span class="kw">:</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">GITHUB_TOKEN</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>保存文件。</p></li>
+<li><p>在命令行里输入：</p>
+<pre><code>git add .
+git commit -m "添加自动更新小助手"
+git push</code></pre>
+<p>第一次推送时，可能会提示你设置上游分支，输入：</p>
+<pre><code>git push --set-upstream origin main</code></pre></li>
+</ol>
+<p>好了！现在小机器人已经在GitHub上等着了。以后你只要修改 <code>index.qmd</code>，然后执行这三行命令：</p>
+<pre><code>git add .
+git commit -m "更新了网站内容"
+git push</code></pre>
+<p>等一两分钟，你的网站就会自动更新啦！🌟</p>
+<hr>
+</section>
+<section id="日常更新就像写日记一样简单" class="level2">
+<h2 class="anchored" data-anchor-id="日常更新就像写日记一样简单">日常更新（就像写日记一样简单）📝</h2>
+<ol type="1">
+<li><p>打开 <code>my-website</code> 文件夹，修改或新建 <code>.qmd</code> 文件（比如 <code>diary.qmd</code>）。</p></li>
+<li><p>在文件里写你的内容。</p></li>
+<li><p>打开命令行，进入 <code>my-website</code> 文件夹。</p></li>
+<li><p>依次输入：</p>
+<pre><code>git add .
+git commit -m "写了今天的日记"
+git push</code></pre></li>
+<li><p>等一会儿，去你的网站看看，新内容已经出现啦！</p></li>
+</ol>
+<hr>
+</section>
+<section id="可能遇到的问题别怕有办法" class="level2">
+<h2 class="anchored" data-anchor-id="可能遇到的问题别怕有办法">可能遇到的问题（别怕，有办法）🆘</h2>
+<ul>
+<li><p><strong>命令敲错了怎么办？</strong><br>
+没关系，重新敲一遍正确的就行。或者按方向键↑可以调出上一条命令修改。</p></li>
+<li><p><strong>提示“不是git仓库”</strong><br>
+说明你忘记 <code>git init</code> 了，在 <code>my-website</code> 文件夹里执行一下就好。</p></li>
+<li><p><strong>push时要求输入用户名密码</strong><br>
+GitHub现在不能用密码了，需要用token。让大人帮忙生成一个token（Settings → Developer settings → Personal access tokens），复制后粘贴到密码框里（粘贴时屏幕不会显示，直接回车就行）。</p></li>
+<li><p><strong>网站更新后没变化？</strong><br>
+等几分钟，或者去GitHub仓库的 <strong>Actions</strong> 标签页看看小机器人有没有成功运行。如果有红色叉叉，点进去看日志，把错误信息复制给大人帮忙看看。</p></li>
+</ul>
+<hr>
+</section>
+<section id="总结一下我们学会了什么" class="level2">
+<h2 class="anchored" data-anchor-id="总结一下我们学会了什么">总结一下，我们学会了什么？✅</h2>
+<ul>
+<li>用Quarto制作简单的网站</li>
+<li>把网站存到GitHub上</li>
+<li>请小机器人（GitHub Actions）自动更新网站</li>
+<li>以后只要写内容、敲三行命令，网站就自动更新</li>
+</ul>
+<p>现在，你可以拥有一个属于自己的网站啦！快去试试吧！🎈</p>
+<blockquote class="blockquote">
+<p>如果还有不懂的地方，可以问问爸爸妈妈，或者在网上搜索“Quarto GitHub Pages”找更多教程。</p>
+</blockquote>
 
 
 </section>

@@ -2,22 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://BONEWOK.github.io/my-website.html</loc>
-    <lastmod>2026-03-05T06:18:20.939Z</lastmod>
+    <lastmod>2026-03-05T06:27:50.743Z</lastmod>
   </url>
   <url>
-    <loc>https://BONEWOK.github.io/个人网站更新.html</loc>
-    <lastmod>2026-03-05T06:18:20.939Z</lastmod>
+    <loc>https://BONEWOK.github.io/网站更新.html</loc>
+    <lastmod>2026-03-05T06:27:50.743Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BONEWOK.github.io/踩过的坑/个人网站更新.html</loc>
+    <lastmod>2026-03-05T06:27:50.744Z</lastmod>
   </url>
   <url>
     <loc>https://BONEWOK.github.io/index.html</loc>
-    <lastmod>2026-03-05T06:18:20.939Z</lastmod>
+    <lastmod>2026-03-05T06:27:50.743Z</lastmod>
   </url>
   <url>
-    <loc>https://BONEWOK.github.io/网站维护指南.html</loc>
-    <lastmod>2026-03-05T06:18:20.939Z</lastmod>
+    <loc>https://BONEWOK.github.io/踩过的坑/网站维护指南.html</loc>
+    <lastmod>2026-03-05T06:27:50.744Z</lastmod>
+  </url>
+  <url>
+    <loc>https://BONEWOK.github.io/踩过的坑/Quarto网站部署指南（小学生版）.html</loc>
+    <lastmod>2026-03-05T06:27:50.743Z</lastmod>
   </url>
   <url>
     <loc>https://BONEWOK.github.io/about.html</loc>
-    <lastmod>2026-03-05T06:18:20.939Z</lastmod>
+    <lastmod>2026-03-05T06:27:50.743Z</lastmod>
   </url>
 </urlset>
