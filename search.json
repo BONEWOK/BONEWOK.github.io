@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "个人网站更新.html",
+    "href": "个人网站更新.html",
+    "title": "book's",
+    "section": "",
+    "text": "更新个人信息（比如新发了一篇论文）\n\n假设你刚发表了一篇论文，想在网站上更新。流程和你创建网站时完全一样：\n\n进入你的项目文件夹my-website，以下是示例\ncd C:\\Users\\BOOK\\Desktop\\AAA_linux\\site-directed\\my-website\n编辑对应的文件\n# 比如在 index.qmd 里更新论文列表，或者在 publications.qmd 里添加新条目\n预览确认（强烈推荐！）\nquarto preview\n重新构建网站\nquarto render\n进入 _site 文件夹并推送到 GitHub\n\n1 进入 _site 文件夹\n\n\ncd _site\n\n2 初始化 git，并强制推送到你的仓库\n\ngit init\n\n3 add\n\ngit add .\n\n4 commit\n\ngit commit -m \"deploy website\"\n\n5 remote\n\ngit remote add origin https://github.com/BONEWOK/BONEWOK.github.io.git\n\n6 branch\n\ngit branch -M main\n\n7 push\n\ngit push -f origin main\n小技巧：如果你只是改文字内容，可以跳过 quarto preview 直接 quarto render，但预览能帮你发现格式问题，避免推到网上才发现不对。"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "book’s",
+    "section": "",
+    "text": "我的个人网站，这是一个层级为 三 的个人网站。\n收录了一些 二 级网站和一些 一 级工具网站。\n\n\nmarkdown基础语法\nquarto网站创建手册\n\n\n\n\n\n\n网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
+  },
+  {
+    "objectID": "index.html#quarto自助手册",
+    "href": "index.html#quarto自助手册",
+    "title": "book’s",
+    "section": "",
+    "text": "markdown基础语法\nquarto网站创建手册"
+  },
+  {
+    "objectID": "index.html#生物信息学二级网站",
+    "href": "index.html#生物信息学二级网站",
+    "title": "book’s",
+    "section": "",
+    "text": "网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "网站维护指南.html",
+    "href": "网站维护指南.html",
+    "title": "3.github操作指南",
+    "section": "",
+    "text": "太好了！看到你成功的那一刻一定很有成就感吧。现在网站已经上线，接下来的维护就像打理自己的小花园一样，定期更新、偶尔修剪，它会随着你的学术成长一起丰富起来。\n下面我为你整理一个日常维护指南，涵盖了你最可能遇到的几种情况："
+  },
+  {
+    "objectID": "网站维护指南.html#日常更新就像写论文一样简单",
+    "href": "网站维护指南.html#日常更新就像写论文一样简单",
+    "title": "3.github操作指南",
+    "section": "🌱 日常更新：就像写论文一样简单",
+    "text": "🌱 日常更新：就像写论文一样简单\n\n1. 更新个人信息（比如新发了一篇论文）\n假设你刚发表了一篇论文，想在网站上更新。流程和你创建网站时完全一样：\n\n进入你的项目文件夹my-website，以下是示例\ncd C:\\Users\\BOOK\\Desktop\\AAA_linux\\site-directed\\my-website\n编辑对应的文件\n# 比如在 index.qmd 里更新论文列表，或者在 publications.qmd 里添加新条目\n预览确认（强烈推荐！）\nquarto preview\n重新构建网站\nquarto render\n进入 _site 文件夹并推送到 GitHub\n\n1 进入 _site 文件夹\n\ncd _site\n\n2 初始化 git，并强制推送到你的仓库\n\ngit init\n\n3 add\n\ngit add .\n\n4 commit\n\ngit commit -m \"deploy website\"\n\n1 remote\n\ngit remote add origin https://github.com/BONEWOK/BONEWOK.github.io.git\n\n6 branch\n\ngit branch -M main\n\n7 push\n\ngit push -f origin main\n\n小技巧：如果你只是改文字内容，可以跳过 quarto preview 直接 quarto render，但预览能帮你发现格式问题，避免推到网上才发现不对。\n\n\n2. 添加新页面（比如增加“教学”或“博客”板块）\n\n在项目文件夹里新建一个 .qmd 文件，比如 teaching.qmd。\n文件开头写上 YAML 头信息：\n---\ntitle: \"教学\"\n---\n用 Markdown 写内容。\n在 _quarto.yml 的 navbar 部分添加这个页面的链接：\nnavbar:\n  left:\n    - text: \"主页\"\n      href: index.qmd\n    - text: \"研究\"\n      href: research.qmd\n    - text: \"教学\"    # 新加的\n      href: teaching.qmd\n然后重复上面的构建和推送步骤。"
+  },
+  {
+    "objectID": "网站维护指南.html#版本控制你的后悔药",
+    "href": "网站维护指南.html#版本控制你的后悔药",
+    "title": "3.github操作指南",
+    "section": "🔄 版本控制：你的“后悔药”",
+    "text": "🔄 版本控制：你的“后悔药”\n你现在已经在用 Git 了，这是一个强大的时间机器。几个常用命令让你随时可以反悔：\n\n\n\n\n\n\n\n\n场景\n命令\n说明\n\n\n\n\n想看看改了什么\ngit status\n显示哪些文件被修改了\n\n\n想撤销某个文件的修改\ngit checkout -- 文件名\n回到上一次提交的状态\n\n\n想回到过去某个版本\ngit log 查看历史，然后 git reset --hard 版本号\n谨慎使用，会丢失之后的所有修改\n\n\n不小心删了文件\ngit checkout -- 文件名\n只要提交过就能恢复\n\n\n\n建议：每次更新网站前，先 git pull 拉取最新状态（如果你在多台电脑上维护），避免冲突。"
+  },
+  {
+    "objectID": "网站维护指南.html#遇到问题怎么办",
+    "href": "网站维护指南.html#遇到问题怎么办",
+    "title": "3.github操作指南",
+    "section": "🚨 遇到问题怎么办？",
+    "text": "🚨 遇到问题怎么办？\n\n情况1：网站打不开了，显示 404\n\n先去 GitHub 仓库看看，_site 里的文件是否成功推送？index.html 在不在？\n检查 Settings → Pages，看看部署状态是不是绿色勾勾。\n如果是红色叉叉，点进去看 Actions 的日志，错误信息一般很明确。\n\n\n\n情况2：样式乱了，或者公式不显示\n\n大概率是路径问题。检查 _quarto.yml 里有没有设置 output-dir，以及 styles.css 的引用路径是否正确。\n在浏览器按 F12 打开开发者工具，看 Console（控制台）里有没有红色报错，通常会告诉你哪个文件没找到。\n\n\n\n情况3：想换主题\nQuarto 支持很多漂亮的主题，在 _quarto.yml 里修改：\nformat:\n  html:\n    theme: cosmo  # 可选：cerulean, journal, flatly, darkly 等\n官方主题列表 可以预览效果。"
+  },
+  {
+    "objectID": "网站维护指南.html#让网站更学术的进阶技巧",
+    "href": "网站维护指南.html#让网站更学术的进阶技巧",
+    "title": "3.github操作指南",
+    "section": "📈 让网站更“学术”的进阶技巧",
+    "text": "📈 让网站更“学术”的进阶技巧\n等你熟悉基础维护后，可以考虑这些功能，对博士生特别有用：\n\n自动生成论文列表\n如果你有 BibTeX 文件（比如从 Google Scholar 导出的），可以用 Quarto 的 citations 功能自动格式化参考文献列表。\n嵌入动态图表\n如果你有生物信息学数据，可以直接在 .qmd 里写 R 或 Python 代码，Quarto 会在渲染时运行并生成图表。这样你更新数据时，图表会自动更新。\n添加访客统计\n在 _quarto.yml 的 include-in-header 里添加一段 Google Analytics 代码，就能看到谁在访问你的主页。\n绑定自定义域名\n等你以后有了自己的名字（比如 zhangsan.com），可以在 GitHub Pages 设置里绑定，让你的网站看起来更专业。"
+  },
+  {
+    "objectID": "网站维护指南.html#最后一点建议",
+    "href": "网站维护指南.html#最后一点建议",
+    "title": "3.github操作指南",
+    "section": "🌟 最后一点建议",
+    "text": "🌟 最后一点建议\n把你网站的维护流程写成一个简单的 备忘录（比如这篇对话的精华），放在项目文件夹里。这样哪怕半年后再更新，也不会忘记步骤。\n你现在拥有的不仅是一个网页，更是你在数字世界的学术身份。随着你发表更多论文、参加更多会议，它会自然生长成你的学术名片。\n如果在维护中遇到任何问题，随时回来问我。祝你科研顺利，网页常新！"
+  }
+]
