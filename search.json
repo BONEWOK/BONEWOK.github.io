@@ -7,6 +7,27 @@
     "text": "更新个人信息（比如新发了一篇论文）\n\n假设你刚发表了一篇论文，想在网站上更新。流程和你创建网站时完全一样：\n\n进入你的项目文件夹my-website，以下是示例\ncd C:\\Users\\BOOK\\Desktop\\AAA_linux\\site-directed\\my-website\n编辑对应的文件\n# 比如在 index.qmd 里更新论文列表，或者在 publications.qmd 里添加新条目\n预览确认（强烈推荐！）\nquarto preview\n重新构建网站\nquarto render\n进入 _site 文件夹并推送到 GitHub\n\n1 进入 _site 文件夹\n\n\ncd _site\n\n2 初始化 git，并强制推送到你的仓库\n\ngit init\n\n3 add\n\ngit add .\n\n4 commit\n\ngit commit -m \"deploy website\"\n\n5 remote\n\ngit remote add origin https://github.com/BONEWOK/BONEWOK.github.io.git\n\n6 branch\n\ngit branch -M main\n\n7 push\n\ngit push -f origin main\n小技巧：如果你只是改文字内容，可以跳过 quarto preview 直接 quarto render，但预览能帮你发现格式问题，避免推到网上才发现不对。"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "book’s",
+    "section": "",
+    "text": "我的第一个个人网站，这是一个层级为 三 的个人网站。嘿嘿\n收录了一些 二 级网站和一些 一 级工具网站。\n\n\nmarkdown基础语法\nquarto网站创建手册\n\n\n\n\n\n\n网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
+  },
+  {
+    "objectID": "index.html#quarto自助手册",
+    "href": "index.html#quarto自助手册",
+    "title": "book’s",
+    "section": "",
+    "text": "markdown基础语法\nquarto网站创建手册"
+  },
+  {
+    "objectID": "index.html#生物信息学二级网站",
+    "href": "index.html#生物信息学二级网站",
+    "title": "book’s",
+    "section": "",
+    "text": "网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
+  },
+  {
     "objectID": "网站维护指南.html",
     "href": "网站维护指南.html",
     "title": "3.github操作指南",
@@ -47,27 +68,6 @@
     "title": "3.github操作指南",
     "section": "🌟 最后一点建议",
     "text": "🌟 最后一点建议\n把你网站的维护流程写成一个简单的 备忘录（比如这篇对话的精华），放在项目文件夹里。这样哪怕半年后再更新，也不会忘记步骤。\n你现在拥有的不仅是一个网页，更是你在数字世界的学术身份。随着你发表更多论文、参加更多会议，它会自然生长成你的学术名片。\n如果在维护中遇到任何问题，随时回来问我。祝你科研顺利，网页常新！"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "book’s",
-    "section": "",
-    "text": "我的个人网站，这是一个层级为 三 的个人网站。\n收录了一些 二 级网站和一些 一 级工具网站。\n\n\nmarkdown基础语法\nquarto网站创建手册\n\n\n\n\n\n\n网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
-  },
-  {
-    "objectID": "index.html#quarto自助手册",
-    "href": "index.html#quarto自助手册",
-    "title": "book’s",
-    "section": "",
-    "text": "markdown基础语法\nquarto网站创建手册"
-  },
-  {
-    "objectID": "index.html#生物信息学二级网站",
-    "href": "index.html#生物信息学二级网站",
-    "title": "book’s",
-    "section": "",
-    "text": "网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
   },
   {
     "objectID": "about.html",
