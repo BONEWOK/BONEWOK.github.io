@@ -1,38 +1,10 @@
 [
   {
-    "objectID": "网站更新.html",
-    "href": "网站更新.html",
-    "title": "修改文件后",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "修改文件后\nadd\ngit add .\ncommit\ngit commit -m \"更新论文\"\npush\ngit push"
-  },
-  {
-    "objectID": "踩过的坑/个人网站更新.html",
-    "href": "踩过的坑/个人网站更新.html",
-    "title": "book's",
-    "section": "",
-    "text": "更新个人信息（比如新发了一篇论文）\n\n假设你刚发表了一篇论文，想在网站上更新。流程和你创建网站时完全一样：\n\n进入你的项目文件夹my-website，以下是示例\ncd C:\\Users\\BOOK\\Desktop\\AAA_linux\\site-directed\\my-website\n编辑对应的文件\n# 比如在 index.qmd 里更新论文列表，或者在 publications.qmd 里添加新条目\n预览确认（强烈推荐！）\nquarto preview\n重新构建网站\nquarto render\n进入 _site 文件夹并推送到 GitHub\n\n1 进入 _site 文件夹\n\n\ncd _site\n\n2 初始化 git，并强制推送到你的仓库\n\ngit init\n\n3 add\n\ngit add .\n\n4 commit\n\ngit commit -m \"deploy website\"\n\n5 remote\n\ngit remote add origin https://github.com/BONEWOK/BONEWOK.github.io.git\n\n6 branch\n\ngit branch -M main\n\n7 push\n\ngit push -f origin main\n小技巧：如果你只是改文字内容，可以跳过 quarto preview 直接 quarto render，但预览能帮你发现格式问题，避免推到网上才发现不对。"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "book’s",
-    "section": "",
-    "text": "我的第一个个人网站，这是一个层级为 三 的个人网站。嘿嘿,不戳。\n收录了一些 二 级网站和一些 一 级工具网站。\n\n\nmarkdown基础语法\nquarto网站创建手册\n\n\n\n\n\n\n网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
-  },
-  {
-    "objectID": "index.html#quarto自助手册",
-    "href": "index.html#quarto自助手册",
-    "title": "book’s",
-    "section": "",
-    "text": "markdown基础语法\nquarto网站创建手册"
-  },
-  {
-    "objectID": "index.html#生物信息学二级网站",
-    "href": "index.html#生物信息学二级网站",
-    "title": "book’s",
-    "section": "",
-    "text": "网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
+    "text": "About this site"
   },
   {
     "objectID": "踩过的坑/网站维护指南.html",
@@ -140,10 +112,94 @@
     "text": "用Quarto制作简单的网站\n把网站存到GitHub上\n请小机器人（GitHub Actions）自动更新网站\n以后只要写内容、敲三行命令，网站就自动更新\n\n现在，你可以拥有一个属于自己的网站啦！快去试试吧！🎈\n\n如果还有不懂的地方，可以问问爸爸妈妈，或者在网上搜索“Quarto GitHub Pages”找更多教程。"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "c117/网站部署.html",
+    "href": "c117/网站部署.html",
+    "title": "部署说明（GitHub Pages / Quarto）",
     "section": "",
-    "text": "About this site"
+    "text": "本目录是一个纯静态单页工具：index.html + style.css + calculator.js + app.js， 无构建步骤、无后端、无外部依赖。目标地址：\nhttps://bonewok.github.io/c117/\n\n\n\n\n\n文件\n作用\n\n\n\n\nindex.html\n页面结构（表单 + 结果容器）\n\n\nstyle.css\n样式（跟随系统浅色/深色，含手机与打印适配）\n\n\ncalculator.js\n计算内核，与 cloning_calculator_v2.py 逐行对应\n\n\napp.js\n表单交互、结果渲染、复制与 URL 分享\n\n\ntests/fixtures.json\n542 组基准用例（由 Python 版生成）\n\n\ntests/parity.test.js\nNode 脚本：逐字段比对 JS 与 Python 结果\n\n\n\n\n\n\n直接双击 index.html 即可（file:// 也能正常计算）。\n或起一个本地静态服务：\ncd c117\npython -m http.server 8000\n# 浏览器打开 http://127.0.0.1:8000/\n\n\n\n你的站点是 Quarto website（main 分支源码，Actions 发布到 gh-pages）。\n\n把整个 c117/ 目录放到仓库根目录（与 index.qmd、_quarto.yml 同级）。\n在 _quarto.yml 的 project: 下声明资源，确保 Quarto 原样拷贝：\nproject:\n  type: website\n  resources:\n    - c117/**\n提交并推送：\ngit add c117 _quarto.yml\ngit commit -m \"add C117 cloning calculator page\"\ngit push origin main\n等 Actions 的 Quarto Publish 跑完，访问 https://bonewok.github.io/c117/。\n\n\n没有 resources 时，Quarto 只拷贝被引用的资源，c117/ 可能不会出现在 _site 里， 表现为 404。加上即可。\n\n\n\n\n在 index.qmd 的「工具」表格里加一行，例如：\n| **🧬 分子克隆** | **[C117 加样计算器](c117/)** | ClonExpress Ultra One Step Cloning Kit V3 单片段同源重组 10 μL 体系：质量归一化、体积分配、工作液稀释方案。 | 纯前端、可分享链接、可复制加样表 |\n\n\n\n&lt;iframe src=\"c117/\" style=\"width:100%;height:1400px;border:0\" loading=\"lazy\"&gt;&lt;/iframe&gt;\n\n\n\n网页版与命令行版必须同步，流程如下：\n\n先改 cloning_calculator_v2.py（唯一权威实现）；\n在项目根目录重新导出基准用例：\npython export_web_fixtures.py\n同步修改 c117/calculator.js；\n跑一致性测试（Node 18+）：\nnode c117/tests/parity.test.js\n输出 OK: ... 0 mismatches 才算通过。测试会逐字段比对数值、分配说明、 警告文案和校验结果，能捕获公式、分支、取整（C printf 半偶舍入）的任何偏差。\n\n\n\n\n\n打开是 404：确认目录名是 c117、已加 resources、Actions 构建成功。\n样式没生效：检查 style.css 是否与 index.html 同目录，强刷（Ctrl+F5）。\n改了页面但线上没变：Pages 有缓存，等 1–2 分钟或换无痕窗口。\n分享链接参数：?vl=&vc=&il=&ic=&mp=&df= 分别对应 Vector 长度/浓度、Insert 长度/浓度、最小加样体积、工作液终体积。\n浏览器兼容：需要 BigInt（Chrome/Edge 67+、Safari 14+、Firefox 68+）， 用于与 Python 完全一致的定点舍入；老旧浏览器可能显示异常。"
+  },
+  {
+    "objectID": "c117/网站部署.html#目录内容",
+    "href": "c117/网站部署.html#目录内容",
+    "title": "部署说明（GitHub Pages / Quarto）",
+    "section": "",
+    "text": "文件\n作用\n\n\n\n\nindex.html\n页面结构（表单 + 结果容器）\n\n\nstyle.css\n样式（跟随系统浅色/深色，含手机与打印适配）\n\n\ncalculator.js\n计算内核，与 cloning_calculator_v2.py 逐行对应\n\n\napp.js\n表单交互、结果渲染、复制与 URL 分享\n\n\ntests/fixtures.json\n542 组基准用例（由 Python 版生成）\n\n\ntests/parity.test.js\nNode 脚本：逐字段比对 JS 与 Python 结果"
+  },
+  {
+    "objectID": "c117/网站部署.html#本地预览",
+    "href": "c117/网站部署.html#本地预览",
+    "title": "部署说明（GitHub Pages / Quarto）",
+    "section": "",
+    "text": "直接双击 index.html 即可（file:// 也能正常计算）。\n或起一个本地静态服务：\ncd c117\npython -m http.server 8000\n# 浏览器打开 http://127.0.0.1:8000/"
+  },
+  {
+    "objectID": "c117/网站部署.html#部署到你的站点",
+    "href": "c117/网站部署.html#部署到你的站点",
+    "title": "部署说明（GitHub Pages / Quarto）",
+    "section": "",
+    "text": "你的站点是 Quarto website（main 分支源码，Actions 发布到 gh-pages）。\n\n把整个 c117/ 目录放到仓库根目录（与 index.qmd、_quarto.yml 同级）。\n在 _quarto.yml 的 project: 下声明资源，确保 Quarto 原样拷贝：\nproject:\n  type: website\n  resources:\n    - c117/**\n提交并推送：\ngit add c117 _quarto.yml\ngit commit -m \"add C117 cloning calculator page\"\ngit push origin main\n等 Actions 的 Quarto Publish 跑完，访问 https://bonewok.github.io/c117/。\n\n\n没有 resources 时，Quarto 只拷贝被引用的资源，c117/ 可能不会出现在 _site 里， 表现为 404。加上即可。"
+  },
+  {
+    "objectID": "c117/网站部署.html#在首页加入口",
+    "href": "c117/网站部署.html#在首页加入口",
+    "title": "部署说明（GitHub Pages / Quarto）",
+    "section": "",
+    "text": "在 index.qmd 的「工具」表格里加一行，例如：\n| **🧬 分子克隆** | **[C117 加样计算器](c117/)** | ClonExpress Ultra One Step Cloning Kit V3 单片段同源重组 10 μL 体系：质量归一化、体积分配、工作液稀释方案。 | 纯前端、可分享链接、可复制加样表 |"
+  },
+  {
+    "objectID": "c117/网站部署.html#可选嵌入到某个页面",
+    "href": "c117/网站部署.html#可选嵌入到某个页面",
+    "title": "部署说明（GitHub Pages / Quarto）",
+    "section": "",
+    "text": "&lt;iframe src=\"c117/\" style=\"width:100%;height:1400px;border:0\" loading=\"lazy\"&gt;&lt;/iframe&gt;"
+  },
+  {
+    "objectID": "c117/网站部署.html#修改算法时如何保持一致",
+    "href": "c117/网站部署.html#修改算法时如何保持一致",
+    "title": "部署说明（GitHub Pages / Quarto）",
+    "section": "",
+    "text": "网页版与命令行版必须同步，流程如下：\n\n先改 cloning_calculator_v2.py（唯一权威实现）；\n在项目根目录重新导出基准用例：\npython export_web_fixtures.py\n同步修改 c117/calculator.js；\n跑一致性测试（Node 18+）：\nnode c117/tests/parity.test.js\n输出 OK: ... 0 mismatches 才算通过。测试会逐字段比对数值、分配说明、 警告文案和校验结果，能捕获公式、分支、取整（C printf 半偶舍入）的任何偏差。"
+  },
+  {
+    "objectID": "c117/网站部署.html#常见问题",
+    "href": "c117/网站部署.html#常见问题",
+    "title": "部署说明（GitHub Pages / Quarto）",
+    "section": "",
+    "text": "打开是 404：确认目录名是 c117、已加 resources、Actions 构建成功。\n样式没生效：检查 style.css 是否与 index.html 同目录，强刷（Ctrl+F5）。\n改了页面但线上没变：Pages 有缓存，等 1–2 分钟或换无痕窗口。\n分享链接参数：?vl=&vc=&il=&ic=&mp=&df= 分别对应 Vector 长度/浓度、Insert 长度/浓度、最小加样体积、工作液终体积。\n浏览器兼容：需要 BigInt（Chrome/Edge 67+、Safari 14+、Firefox 68+）， 用于与 Python 完全一致的定点舍入；老旧浏览器可能显示异常。"
+  },
+  {
+    "objectID": "网站更新.html",
+    "href": "网站更新.html",
+    "title": "修改文件后",
+    "section": "",
+    "text": "修改文件后\nadd\ngit add .\ncommit\ngit commit -m \"更新论文\"\npush\ngit push"
+  },
+  {
+    "objectID": "踩过的坑/个人网站更新.html",
+    "href": "踩过的坑/个人网站更新.html",
+    "title": "book's",
+    "section": "",
+    "text": "更新个人信息（比如新发了一篇论文）\n\n假设你刚发表了一篇论文，想在网站上更新。流程和你创建网站时完全一样：\n\n进入你的项目文件夹my-website，以下是示例\ncd C:\\Users\\BOOK\\Desktop\\AAA_linux\\site-directed\\my-website\n编辑对应的文件\n# 比如在 index.qmd 里更新论文列表，或者在 publications.qmd 里添加新条目\n预览确认（强烈推荐！）\nquarto preview\n重新构建网站\nquarto render\n进入 _site 文件夹并推送到 GitHub\n\n1 进入 _site 文件夹\n\n\ncd _site\n\n2 初始化 git，并强制推送到你的仓库\n\ngit init\n\n3 add\n\ngit add .\n\n4 commit\n\ngit commit -m \"deploy website\"\n\n5 remote\n\ngit remote add origin https://github.com/BONEWOK/BONEWOK.github.io.git\n\n6 branch\n\ngit branch -M main\n\n7 push\n\ngit push -f origin main\n小技巧：如果你只是改文字内容，可以跳过 quarto preview 直接 quarto render，但预览能帮你发现格式问题，避免推到网上才发现不对。"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "book’s",
+    "section": "",
+    "text": "我的第一个个人网站，这是一个层级为 三 的个人网站。嘿嘿,不戳。\n收录了一些 二 级网站和一些 一 级工具网站。\n\n\nmarkdown基础语法\nquarto网站创建手册\n\n\n\n\n\n\n网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
+  },
+  {
+    "objectID": "index.html#quarto自助手册",
+    "href": "index.html#quarto自助手册",
+    "title": "book’s",
+    "section": "",
+    "text": "markdown基础语法\nquarto网站创建手册"
+  },
+  {
+    "objectID": "index.html#生物信息学二级网站",
+    "href": "index.html#生物信息学二级网站",
+    "title": "book’s",
+    "section": "",
+    "text": "网站名称\n平台\n简介\n\n\n\n\nAwesome-Bioinformatics\ngithub\n一份精心策划的生物信息学软件、资源和库清单。主要基于命令行，并且是免费或开源的。"
   }
 ]
