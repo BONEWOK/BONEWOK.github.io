@@ -194,6 +194,45 @@ input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; marg
   .error { background: #2b1618; border-color: #5b2a2e; color: #ff9b9b; }
 }
 
+/* ---------------- 结果：工作液准备（置顶） ---------------- */
+.prep {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+}
+.prep-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.prep-head .hint { margin: 0; font-weight: 400; }
+.prep-rows { display: grid; gap: 6px; }
+.prep-row {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+}
+.prep-name {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+.prep-name .badge { margin-left: 0; }
+.prep-text { font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+.prep-text b { color: var(--text); font-family: var(--mono); font-weight: 700; }
+.badge.bad-badge { background: #fdecec; color: #a12020; }
+
 /* ---------------- 结果：关键数字 ---------------- */
 #results { scroll-margin-top: 16px; }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
@@ -396,6 +435,7 @@ table.mix tr.total td:last-child { border-radius: 0 6px 6px 0; }
 /* ---------------- 响应式 ---------------- */
 @media (max-width: 760px) {
   .form .pair, .checks { grid-template-columns: 1fr; }
+  .prep-row { grid-template-columns: 1fr; gap: 2px; }
   .stats { grid-template-columns: 1fr 1fr; }
   .row { flex-direction: column; gap: 2px; }
   .row dd { text-align: left; }

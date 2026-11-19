@@ -241,6 +241,33 @@
     }).join("") + "</div>";
   }
 
+  function prepBoxHTML(res) {
+    var items = [["Vector", res.vector_dilution], ["Insert", res.insert_dilution]].map(
+      function (pair) {
+        var name = pair[0];
+        var plan = pair[1];
+        var badge;
+        var text;
+        if (plan.needed === null) {
+          badge = '<span class="badge bad-badge">无法配制</span>';
+          text = esc(plan.error);
+        } else if (plan.needed) {
+          badge = '<span class="badge work">需稀释</span>';
+          text = "取 <b>" + f2(plan.stock_vol) + " μL</b> 母液（" + f2(plan.stock_conc) +
+            " ng/μL）+ <b>" + f2(plan.water_vol) + " μL</b> ddH₂O → <b>" +
+            f2(plan.final_vol) + " μL</b>，<b>" + f2(plan.work_conc) + " ng/μL</b>";
+        } else {
+          badge = '<span class="badge stock">无需稀释</span>';
+          text = "直接使用原始母液 <b>" + f2(plan.stock_conc) + " ng/μL</b>";
+        }
+        return '<div class="prep-row"><div class="prep-name">' + name + " " + badge +
+          '</div><div class="prep-text">' + text + "</div></div>";
+      });
+    return '<div class="prep"><div class="prep-head">工作液准备' +
+      '<span class="hint">先配好工作液，再按下方体系加样</span></div>' +
+      '<div class="prep-rows">' + items.join("") + "</div></div>";
+  }
+
   function renderResults(res) {
     var html = "";
     if (res.warnings.length) {
@@ -248,6 +275,7 @@
         res.warnings.map(function (warning) { return "<li>" + esc(warning) + "</li>"; }).join("") +
         "</ul></div>";
     }
+    html += prepBoxHTML(res);
     html += '<div class="stats">' +
       stat("Vector 实际体积", f2(res.vector_vol_ul) + "<span>μL</span>",
         f2(res.vector_mass_ng) + " ng · " + f2(res.vector_work_conc_ng_ul) + " ng/μL") +
