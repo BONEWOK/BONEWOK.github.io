@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - c117/**
 
 website:
   title: "book's"

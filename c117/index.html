@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C117 同源重组加样计算器 · ClonExpress Ultra One Step Cloning Kit V3</title>
+<meta name="description" content="Vazyme ClonExpress Ultra One Step Cloning Kit V3 (C117) 单片段同源重组 10 μL 体系加样计算器：理论质量、体积分配、统一质量系数与工作液稀释方案。">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232780e3'/%3E%3Cpath d='M9 21V11h2.2l4.3 6.4L19.8 11H22v10h-2v-6.3L16.6 19h-2.2L11 14.7V21z' fill='white'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="back" href="https://bonewok.github.io/">← book's</a>
+    <h1>ClonExpress Ultra One Step Cloning Kit V3 <span class="tag">C117</span></h1>
+    <p class="sub">单片段同源重组 · 固定 10 μL 体系 · Vector + Insert + ddH₂O = 5 μL</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <form id="calc-form" class="card form" novalidate>
+    <div class="pair">
+      <fieldset>
+        <legend><span class="dot dot-v"></span>Vector <span class="legend-sub">线性化载体</span></legend>
+        <div class="grid2">
+          <label>长度
+            <span class="input"><input id="vl" name="vector-len" type="number" min="0" step="any" inputmode="decimal" placeholder="10000" autocomplete="off" required><i>bp</i></span>
+          </label>
+          <label>母液浓度
+            <span class="input"><input id="vc" name="vector-conc" type="number" min="0" step="any" inputmode="decimal" placeholder="20" autocomplete="off" required><i>ng/μL</i></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="dot dot-i"></span>Insert <span class="legend-sub">插入片段</span></legend>
+        <div class="grid2">
+          <label>长度
+            <span class="input"><input id="il" name="insert-len" type="number" min="0" step="any" inputmode="decimal" placeholder="2500" autocomplete="off" required><i>bp</i></span>
+          </label>
+          <label>母液浓度
+            <span class="input"><input id="ic" name="insert-conc" type="number" min="0" step="any" inputmode="decimal" placeholder="50" autocomplete="off" required><i>ng/μL</i></span>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <details class="advanced">
+      <summary>高级参数<span class="muted">最小加样体积 1.0 μL · 工作液终体积 30 μL</span></summary>
+      <div class="grid2 adv-grid">
+        <label>最小加样体积
+          <span class="input"><input id="mp" type="number" min="0" step="any" inputmode="decimal" value="1"><i>μL</i></span>
+        </label>
+        <label>工作液最终配制体积
+          <span class="input"><input id="df" type="number" min="0" step="any" inputmode="decimal" value="30"><i>μL</i></span>
+        </label>
+      </div>
+      <p class="hint">最小加样体积须 ≤ 2.5 μL；工作液按 C1 × V1 = C2 × V2 由母液配制。</p>
+    </details>
+
+    <div class="actions">
+      <button type="submit" class="btn primary">计算加样方案</button>
+      <button type="button" class="btn" id="example-btn">填入示例</button>
+      <button type="button" class="btn ghost" id="link-btn">复制分享链接</button>
+    </div>
+    <p class="error" id="error" role="alert" hidden></p>
+  </form>
+
+  <section id="results" aria-live="polite" hidden></section>
+
+  <section class="card about">
+    <h2 class="about-title">计算依据</h2>
+    <ul class="bullet">
+      <li>理论质量：Insert ≤ Vector 时 Vector 0.02、Insert 0.04 ng/bp；Insert &gt; Vector 时系数互换。</li>
+      <li>质量归一化：优先用<b>同一个比例系数</b>把两者同时缩放进 10–100 ng，保持原始质量比。</li>
+      <li>体积分配：DNA 区上限 5 μL；低于最小加样体积者先抬到最小值，超出上限时按比例缩小或固定最小值、余量给另一条。</li>
+      <li>统一质量系数 <code>s = min(1, Cv·Vv/Mv, Ci·Vi/Mi)</code>：两种 DNA 同乘 s，实际质量比恒等于目标比，且工作液浓度必不高于母液。</li>
+      <li>稀释：<code>C1·V1 = C2·V2</code>，默认配制 30 μL；母液浓度不足时给出明确警告，不生成错误方案。</li>
+    </ul>
+    <p class="hint">命令行版本与本页共用同一算法（<code>cloning_calculator_v2.py</code>），并由 542 组基准用例逐字段校验一致。</p>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Vazyme C117 说明书 Version 24.1 · 计算结果仅供实验参考，请按实际浓度与移液器量程复核。</p>
+    <p><a href="https://bonewok.github.io/">book's</a> · <a href="../">返回首页</a></p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="calculator.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
